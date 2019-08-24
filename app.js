@@ -4,14 +4,14 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
-const config = require('./config/database');
+// const config = require('./config/database');
 
 // Connect To Database (NEW) But not working!!!!!!!!!! (because of secret in db.js!!!!!)
-const db = require('./config/database');
+const db = 'mongodb+srv://samrem:3Gwurube.@cluster0-xjt13.mongodb.net/test?retryWrites=true&w=majority';
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 // Connect to mongoose
-mongoose.connect(db.database, {
+mongoose.connect(db, {
     useMongoClient: true
 })
 .then(() => console.log('MongoDB Connected...'))
