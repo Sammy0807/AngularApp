@@ -1,11 +1,6 @@
 module.exports = {
   // configure the code below with your username, password and mlab database information
-<<<<<<< HEAD
-  database: newFunction(), //prod
-=======
-  database: process.env.CONNECTIONSTRING,   //prod
-  
->>>>>>> 4bc0f770825997fb23c37b48388ccf1ed37635c7
+  database: process.env.CONNECTIONSTRING, //prod
   //database: 'mongodb://localhost:27017/meanauth',    //dev
   secret: "yoursecret"
 };
